@@ -22,65 +22,65 @@ export const appointmentData = [
   },
 ];
 
-export const doctorData = [
+export const serviceData = [
   {
     id: 1,
     name: "Hazel Valery",
     service: "Swedish Massage",
-    img: "./img/dr1.jpg",
+    img: "../assets/swedish.jpg",
   },
   {
     id: 2,
     name: "Hormaie Carpanter",
     service: "Aromatherapy Massage",
-    img: "./img/dr2.jpg",
+    img: "../assets/aroma-terapi.jpg",
   },
   {
     id: 3,
     name: "Arianna Mary",
     service: "Deep Tissue Massage",
-    img: "./img/dr3.jpg",
+    img: "../assets/dr3.jpg",
   },
   {
     id: 4,
     name: "Jessica White",
     service: "Reflexology",
-    img: "./img/dr4.jpg",
+    img: "../assets/dr4.jpg",
   },
   {
     id: 5,
     name: "Harry Coming",
     service: "Medical Massage",
-    img: "./img/dr9.jpg",
+    img: "../assets/dr9.jpg",
   },
   {
     id: 6,
     name: "Kristensen Connor",
     service: "Hot Stone Therapy",
-    img: "./img/dr6.jpg",
+    img: "../assets/dr6.jpg",
   },
   {
     id: 7,
     name: "Oliver Graham",
     service: "Thai Massage",
-    img: "./img/dr7.jpg",
+    img: "../assets/dr7.jpg",
   },
   {
     id: 8,
     name: "Mary Motley",
     service: "Indian Head Massage",
-    img: "./img/dr8.jpg",
+    img: "../assets/dr8.jpg",
   },
   {
     id: 9,
     name: "Kate A",
     service: "Lomi Lomi Massage",
-    img: "./img/dr7.jpg",
+    img: "../assets/dr7.jpg",
   },
   {
     id: 10,
     name: "Mary Motley",
     service: "Back, Shoulder and Neck Massage",
-    img: "./img/dr8.jpg",
+    img: "../assets/dr8.jpg",
   },
 ];
