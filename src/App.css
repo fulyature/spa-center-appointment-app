@@ -1,13 +1,14 @@
 /*? Global Stlye for App */
 
-.doctor-img {
+.service-img {
   transition: transform 0.5s;
   border-radius: 1rem;
-  max-height: 130px;
+  height: 130px;
+  width: 180px;
 }
-.doctor-img:hover {
+.service-img:hover {
   transform: scale(1.05);
-  border: 2px solid red;
+  border: 2px solid gray;
   cursor: pointer;
 }
 
