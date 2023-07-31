@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function AddModal({ show, handleClose }) {
   const [name, setName] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -21,6 +21,7 @@ function AddModal({ show, handleClose }) {
                 placeholder="Enter name"
                 required
                 onChange={(e) => setName(e.target.value)}
+                value={name}
               />
             </Form.Group>
 
@@ -31,6 +32,7 @@ function AddModal({ show, handleClose }) {
                 placeholder="Date"
                 required
                 onChange={(e) => setDate(e.target.value)}
+                value={date}
               />
             </Form.Group>
 
