@@ -1,24 +1,37 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { useState } from "react";
 
-function AddModal() {
+function AddModal({ show, handleClose }) {
+  const [name, setName] = useState("");
+  const [date, setDate] = useState("");
   return (
     <>
-      <Modal>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
+          <Modal.Title>Appoinment for ...</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="name">
               <Form.Label>Patient Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" required />
+              <Form.Control
+                type="text"
+                placeholder="Enter name"
+                required
+                onChange={(e) => setName(e.target.value)}
+              />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="date">
               <Form.Label>Date</Form.Label>
-              <Form.Control type="date" placeholder="Date" required />
+              <Form.Control
+                type="date"
+                placeholder="Date"
+                required
+                onChange={(e) => setDate(e.target.value)}
+              />
             </Form.Group>
 
             <div className="text-center">

@@ -12,16 +12,16 @@ const Service = () => {
     setShow(true);
   };
   return (
-    <Container className="p-2">
+    <Container className="p-1">
       <h3 className="display-6 mb-3" style={{ color: "#7a7672" }}>
         OUR SERVICES
       </h3>
 
-      <Row className="flex-wrap">
+      <Row className="flex-wrap justify-content-center">
         {serviceData.map((item) => {
-          console.log(item, "item");
+          console.log(item);
           return (
-            <Col xs={6} sm={4} md={3}>
+            <Col key={item.id} xs={6} sm={4} md={3}>
               <img
                 src={item.img}
                 alt={item.name}
