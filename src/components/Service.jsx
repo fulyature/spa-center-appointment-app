@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 
 import { useState } from "react";
 
-const Service = () => {
+const Service = ({ apps, setApps }) => {
   const [show, setShow] = useState(false);
 
   const handleImgClick = () => {
@@ -38,7 +38,12 @@ const Service = () => {
         })}
       </Row>
 
-      <AddModal show={show} handleClose={() => setShow(false)} />
+      <AddModal
+        show={show}
+        handleClose={() => setShow(false)}
+        apps={apps}
+        setApps={setApps}
+      />
     </Container>
   );
 };

@@ -10,7 +10,7 @@ const Home = () => {
       <h1 className="display-5" style={{ color: "#DFD7BF" }}>
         SPA CENTER
       </h1>
-      <Service />
+      <Service apps={appointments} setApps={setAppointments} />
       <AppoinmentList apps={appointments} />
     </main>
   );
