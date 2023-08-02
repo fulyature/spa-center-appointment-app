@@ -1,21 +1,21 @@
 export const appointmentData = [
   {
     id: 1,
-    customer: "Selana Vermont",
+    patient: "Selana Vermont",
     day: new Date().toISOString().slice(0, 10),
     consulted: true,
     proficient: "Tarık Valery",
   },
   {
     id: 2,
-    customer: "Jacob Coming",
+    patient: "Jacob Coming",
     day: new Date().toISOString().slice(0, 10),
     consulted: false,
     proficient: "Jessica White",
   },
   {
     id: 3,
-    customer: "Thomas Black",
+    patient: "Thomas Black",
     day: new Date().toISOString().slice(0, 10),
     consulted: true,
     proficient: "Hormaie Carpanter",

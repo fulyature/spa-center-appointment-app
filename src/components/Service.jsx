@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Service = ({ apps, setApps }) => {
   const [show, setShow] = useState(false);
-
+  const [proficient, setProficient] = useState("");
   const handleImgClick = () => {
     setShow(true);
   };
@@ -21,18 +21,20 @@ const Service = ({ apps, setApps }) => {
         className="flex-wrap justify-content-center"
         style={{ color: "#DFD7BF" }}
       >
-        {serviceData.map((item) => {
-          console.log(item);
+        {serviceData.map(({ id, name, service, img }) => {
           return (
-            <Col key={item.id} xs={6} sm={4} md={3}>
+            <Col key={id} xs={6} sm={4} md={3}>
               <img
-                src={item.img}
-                alt={item.name}
+                src={img}
+                alt={name}
                 className="service-img"
-                onClick={handleImgClick}
+                onClick={() => {
+                  setProficient(name);
+                  handleImgClick();
+                }}
               />
-              <h5>{item.name}</h5>
-              <h6>{item.service}</h6>
+              <h5>{name}</h5>
+              <h6>{service}</h6>
             </Col>
           );
         })}
@@ -43,6 +45,7 @@ const Service = ({ apps, setApps }) => {
         handleClose={() => setShow(false)}
         apps={apps}
         setApps={setApps}
+        proficient={proficient}
       />
     </Container>
   );

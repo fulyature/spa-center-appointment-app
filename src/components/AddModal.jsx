@@ -3,12 +3,23 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 
-function AddModal({ show, handleClose, apps, setApps }) {
+function AddModal({ show, handleClose, apps, setApps, proficient }) {
   const [name, setName] = useState("");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    //diziye obje ekliyoruz. bu yüzden spread yönt. ile diziyi açıyoruz. yeni objeyi süslünün içind eyazıcaz olması gerekenleri
+    setApps([
+      ...apps,
+      {
+        id: apps.length + 1,
+        patient: name,
+        day: date,
+        consulted: false,
+        proficient: proficient,
+      },
+    ]);
     handleClose();
   };
 
@@ -16,7 +27,7 @@ function AddModal({ show, handleClose, apps, setApps }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Appoinment for ...</Modal.Title>
+          <Modal.Title>Appoinment for {proficient}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
