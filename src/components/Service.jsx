@@ -13,11 +13,14 @@ const Service = () => {
   };
   return (
     <Container className="p-1">
-      <h3 className="display-6 mb-3" style={{ color: "#7a7672" }}>
+      <h3 className="display-6 mb-3" style={{ color: "#DFD7BF" }}>
         OUR SERVICES
       </h3>
 
-      <Row className="flex-wrap justify-content-center">
+      <Row
+        className="flex-wrap justify-content-center"
+        style={{ color: "#DFD7BF" }}
+      >
         {serviceData.map((item) => {
           console.log(item);
           return (

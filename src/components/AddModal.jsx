@@ -8,6 +8,7 @@ function AddModal({ show, handleClose }) {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const handleSubmit = (e) => {
     e.preventDefault();
+    handleClose();
   };
 
   return (
