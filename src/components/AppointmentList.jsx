@@ -15,13 +15,16 @@ const AppoinmentList = ({ apps }) => {
           key={id}
           className={consulted ? "appoinments consulted" : "appoinments"}
         >
-          <Row style={{ color: "#DFD7BF" }}>
-            <Col>
+          <Row
+            className="justify-content-between align-item-center"
+            style={{ color: "#DFD7BF" }}
+          >
+            <Col xs={12} sm={12} md={6}>
               <h4>{customer}</h4>
               <h5>{proficient}</h5>
             </Col>
             {/* <Col>{day}</Col> */}
-            <Col>
+            <Col className="text-end">
               <RiDeleteBack2Line className="text-danger fs-2" />
             </Col>
           </Row>
