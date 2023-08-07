@@ -13,26 +13,31 @@ const Service = ({ apps, setApps }) => {
   };
   return (
     <Container className="p-1">
-      <h3 className="display-6 mb-3" style={{ color: "#DFD7BF" }}>
+      <h3
+        className="display-6 mb-3"
+        style={{ color: "#DFD7BF", fontWeight: "bold" }}
+      >
         OUR SERVICES
       </h3>
 
       <Row
-        className="flex-wrap justify-content-center"
+        className="flex-wrap gap-5 justify-content-center"
         style={{ color: "#DFD7BF" }}
       >
         {serviceData.map(({ id, name, service, img }) => {
           return (
-            <Col key={id} xs={6} sm={4} md={3}>
-              <img
-                src={img}
-                alt={name}
-                className="service-img"
-                onClick={() => {
-                  setProficient(name);
-                  handleImgClick();
-                }}
-              />
+            <Col className="serviceimg-container" key={id} xs={6} sm={4} md={3}>
+              <div className="serviceimg-wrapper">
+                <img
+                  src={img}
+                  alt={name}
+                  className="service-img"
+                  onClick={() => {
+                    setProficient(name);
+                    handleImgClick();
+                  }}
+                />
+              </div>
               <h5>{name}</h5>
               <h6>{service}</h6>
             </Col>

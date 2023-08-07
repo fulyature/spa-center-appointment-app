@@ -10,7 +10,7 @@ const AppoinmentList = ({ apps }) => {
         Appointment List
       </h3>
 
-      {apps.map(({ id, customer, consulted, day, proficient }) => (
+      {apps.map(({ id, patient, consulted, day, proficient }) => (
         <div
           key={id}
           className={consulted ? "appoinments consulted" : "appoinments"}
@@ -20,10 +20,10 @@ const AppoinmentList = ({ apps }) => {
             style={{ color: "#DFD7BF" }}
           >
             <Col xs={12} sm={12} md={6}>
-              <h4>{customer}</h4>
+              <h4>{patient}</h4>
               <h5>{proficient}</h5>
             </Col>
-            {/* <Col>{day}</Col> */}
+            <Col>{day}</Col>
             <Col className="text-end">
               <RiDeleteBack2Line className="text-danger fs-2" />
             </Col>
