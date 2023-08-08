@@ -2,8 +2,11 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { RiDeleteBack2Line } from "react-icons/ri";
 
-const AppoinmentList = ({ apps }) => {
+const AppoinmentList = ({ apps, setApps }) => {
   console.log(apps);
+  const handleDelete = (id) => {
+    setApps();
+  };
   return (
     <Container className="p-2">
       <h3 className="display-6" style={{ color: "#DFD7BF" }}>
@@ -25,7 +28,11 @@ const AppoinmentList = ({ apps }) => {
             </Col>
             <Col>{day}</Col>
             <Col className="text-end">
-              <RiDeleteBack2Line className="text-danger fs-2" />
+              <RiDeleteBack2Line
+                className="text-danger fs-2"
+                type="button"
+                onClick={handleDelete(id)}
+              />
             </Col>
           </Row>
         </div>

@@ -14,7 +14,7 @@ const Home = () => {
         SPA CENTER
       </h1>
       <Service apps={appointments} setApps={setAppointments} />
-      <AppoinmentList apps={appointments} />
+      <AppoinmentList apps={appointments} setApps={setAppointments} />
     </main>
   );
 };

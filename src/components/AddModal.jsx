@@ -26,8 +26,10 @@ function AddModal({ show, handleClose, apps, setApps, proficient }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Appoinment for {proficient}</Modal.Title>
+        <Modal.Header className="bg-warning" closeButton>
+          <Modal.Title className="text-danger">
+            Appoinment for {proficient}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
