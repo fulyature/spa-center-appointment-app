@@ -5,7 +5,7 @@ import { RiDeleteBack2Line } from "react-icons/ri";
 const AppoinmentList = ({ apps, setApps }) => {
   console.log(apps);
   const handleDelete = (id) => {
-    setApps();
+    setApps(apps.filter((a) => a.id !== id));
   };
   return (
     <Container className="p-2">
@@ -31,7 +31,7 @@ const AppoinmentList = ({ apps, setApps }) => {
               <RiDeleteBack2Line
                 className="text-danger fs-2"
                 type="button"
-                onClick={handleDelete(id)}
+                onClick={() => handleDelete(id)}
               />
             </Col>
           </Row>

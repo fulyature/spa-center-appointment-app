@@ -13,7 +13,8 @@ function AddModal({ show, handleClose, apps, setApps, proficient }) {
     setApps([
       ...apps,
       {
-        id: apps.length + 1,
+        //uniq bir değer alması için id ye bu fks yi verdim
+        id: new Date().getTime(),
         patient: name,
         day: date,
         consulted: false,
