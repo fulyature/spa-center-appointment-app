@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ec2d51a5.css",
-    "main.js": "/static/js/main.94341a02.js",
-    "index.html": "/index.html",
-    "main.ec2d51a5.css.map": "/static/css/main.ec2d51a5.css.map",
-    "main.94341a02.js.map": "/static/js/main.94341a02.js.map"
+    "main.css": "/spa-center-appointment-app/static/css/main.ec2d51a5.css",
+    "main.js": "/spa-center-appointment-app/static/js/main.90920607.js",
+    "index.html": "/spa-center-appointment-app/index.html",
+    "main.ec2d51a5.css.map": "/spa-center-appointment-app/static/css/main.ec2d51a5.css.map",
+    "main.90920607.js.map": "/spa-center-appointment-app/static/js/main.90920607.js.map"
   },
   "entrypoints": [
     "static/css/main.ec2d51a5.css",
-    "static/js/main.94341a02.js"
+    "static/js/main.90920607.js"
   ]
 }
